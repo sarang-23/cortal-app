@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import ScatterPlotD3 from "./components/ScatterPlotD3";
 
-function App() {
+const App: React.FC = () => {
+  const scatterData = {
+    x: [10, 20, 30, 40, 50],
+    y: [10, 20, 30, 40, 50],
+    images: [
+      "https://hale-assets-eha4dnapbxakc4db.z01.azurefd.net/assets/logo-no-background-color.svg",
+      "https://hale-assets-eha4dnapbxakc4db.z01.azurefd.net/assets/logo-no-background-color.svg",
+      "https://hale-assets-eha4dnapbxakc4db.z01.azurefd.net/assets/logo-no-background-color.svg",
+      "https://hale-assets-eha4dnapbxakc4db.z01.azurefd.net/assets/logo-no-background-color.svg",
+      "https://hale-assets-eha4dnapbxakc4db.z01.azurefd.net/assets/logo-no-background-color.svg",
+    ],
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Scatter Plot with Images using D3.js</h1>
+      <ScatterPlotD3 data={scatterData} />
     </div>
   );
-}
+};
 
 export default App;
