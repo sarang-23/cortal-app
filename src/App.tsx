@@ -1,19 +1,20 @@
 import React from "react";
-import ScatterPlotD3 from "./components/ScatterPlotD3";
-import D3CsvPlot from "./components/plotyjs3D";
-import D3ScatterPlot3D from "./components/ScatterPlotD3";
 import "./App.css";
-import ScatterPlotImages from "./components/ScatterPlotImages";
 import { GlobalContext } from "./context/AppContext";
+import Header from "./components/Header";
+import Content from "./components/Content";
 
 const App: React.FC = () => {
   return (
     <GlobalContext>
       <div className="App">
-        <h1>3D Image Embeddings Visualization</h1>
-        <D3ScatterPlot3D />
-        {/* <ScatterPlotImages /> */}
-        {/* <D3CsvPlot /> */}
+        <Header />
+        <main className="content">
+          <h1 style={{ marginBottom: "30px" }}>
+            3D Image Embeddings Visualization
+          </h1>
+          <Content />
+        </main>
       </div>
     </GlobalContext>
   );

@@ -1,6 +1,6 @@
 /*
  About : This component defines the context for the application.
- It is responsible for managing the zoomLevels and active Node tracking.
+ It is responsible for managing the zoomLevels and active Node tracking. 
 
 */
 

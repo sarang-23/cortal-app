@@ -38,20 +38,21 @@ export const attachScatterPlot = (
     .attr("cx", (d: number[]) => xScale(d[0]))
     .attr("cy", (d: number[]) => yScale(d[1]))
     .attr("r", (d: number[]) => zScale(d[2]))
-    .style("fill", "#87CEEB")
-    .style("stroke", "black")
+    .style("fill", "#68709b")
+    .style("stroke", "#ffffff")
     .on("mouseover", (event: any, d: number[]) => {
-      // Show tooltip with x, y, z positions
-      scatterGroup.style("cursor", "pointer");
-      const tooltip = d3.select("#tooltip");
-      tooltip
-        .style("visibility", "visible")
-        .html(`X: ${d[0]}<br>Y: ${d[1]}<br>Z: ${d[2]}`)
-        .style("left", event.pageX + 10 + "px")
-        .style("top", event.pageY - 10 + "px");
+      console.log(event, d);
+      // const tooltip = d3.select("#tooltip");
+      // tooltip
+      //   .style("visibility", "visible")
+      //   .html(
+      //     `<img src="images/thumbnail/image_0.png" width=100 height=100/><br/><br/>X: ${d[0]}<br>Y: ${d[1]}<br>Z: ${d[2]}`
+      //   )
+      //   .style("position", "absolute")
+      //   .style("left", event.clientX + 10 + "px")
+      //   .style("top", event.clientY - 10 + "px");
     })
     .on("mouseout", () => {
-      // Hide tooltip on mouseout
       d3.select("#tooltip").style("visibility", "hidden");
     });
 };
