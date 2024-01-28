@@ -63,7 +63,7 @@ export const attachScatterPlot = (
         .html(generateTooltipHTML(Number(eleIndex), d))
         .style("position", "absolute")
         .style("left", event.clientX + 10 + "px")
-        .style("top", event.clientY - 10 + "px");
+        .style("top", event.clientY - 130 + "px");
     })
     .on("mouseout", () => {
       d3.select("#tooltip").style("visibility", "hidden");
@@ -80,7 +80,7 @@ export const attachScatterPlot = (
 
 const generateTooltipHTML = (eleIndex: number, d: number[]) => {
   return `
-  <div style="padding:20px;background-color:#333; border-radius:10px;color:#fff; display: flex;
+  <div style="padding:20px;background-color:#333; border-radius:30px;color:#fff; display: flex;
              flex-direction:column;justify-content:center; align-items:center;">
     <span>Image : image_${eleIndex}.png</span><br/>
     <img src="images/thumbnail/image_${eleIndex}.png" width=100 height=100/>
