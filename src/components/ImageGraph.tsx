@@ -1,5 +1,9 @@
 import React, { useContext, useRef } from "react";
-import { ACTIONS, AppDispatchContext } from "../context/AppContext";
+import {
+  ACTIONS,
+  AppDispatchContext,
+  AppStateContext,
+} from "../context/AppContext";
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
 import usePaintGraph from "../hooks/usePaintGraph";
@@ -10,6 +14,7 @@ const ImageGraph: React.FC = () => {
   //Custom hook to paint the SVG using d3
   usePaintGraph(svgRef);
 
+  const { zoomLevel } = useContext(AppStateContext);
   const dispatch = useContext(AppDispatchContext);
 
   const handleZoom = (e: any) => {
@@ -30,6 +35,7 @@ const ImageGraph: React.FC = () => {
           max={100}
           onChange={handleZoom}
         />
+        <span>Zoom Level : {zoomLevel}</span>
       </Box>
     </div>
   );

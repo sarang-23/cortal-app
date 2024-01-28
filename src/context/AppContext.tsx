@@ -8,6 +8,7 @@ import React, { ReactNode, createContext, useReducer } from "react";
 
 interface AppContext {
   zoomLevel: number;
+  activeNode?: number;
 }
 
 const initialState: AppContext = {
@@ -16,6 +17,7 @@ const initialState: AppContext = {
 
 export const ACTIONS = {
   ZOOM: "ZOOM",
+  SET_ACTIVE_NODE: "SET_ACTIVE_NODE",
 };
 
 const appReducer = (state: AppContext, action: any) => {
@@ -24,6 +26,12 @@ const appReducer = (state: AppContext, action: any) => {
       return {
         ...state,
         zoomLevel: action.payload,
+      };
+    }
+    case ACTIONS.SET_ACTIVE_NODE: {
+      return {
+        ...state,
+        activeNode: action.payload,
       };
     }
     default: {
