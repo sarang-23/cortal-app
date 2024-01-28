@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/cortal-app/static/css/main.37ba9e72.css",
+    "main.js": "/cortal-app/static/js/main.d8968d15.js",
+    "static/js/787.53f2d0da.chunk.js": "/cortal-app/static/js/787.53f2d0da.chunk.js",
+    "index.html": "/cortal-app/index.html",
+    "main.37ba9e72.css.map": "/cortal-app/static/css/main.37ba9e72.css.map",
+    "main.d8968d15.js.map": "/cortal-app/static/js/main.d8968d15.js.map",
+    "787.53f2d0da.chunk.js.map": "/cortal-app/static/js/787.53f2d0da.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.37ba9e72.css",
+    "static/js/main.d8968d15.js"
+  ]
+}
