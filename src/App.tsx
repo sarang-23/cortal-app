@@ -1,24 +1,21 @@
 import React from "react";
 import ScatterPlotD3 from "./components/ScatterPlotD3";
+import D3CsvPlot from "./components/plotyjs3D";
+import D3ScatterPlot3D from "./components/ScatterPlotD3";
+import "./App.css";
+import ScatterPlotImages from "./components/ScatterPlotImages";
+import { GlobalContext } from "./context/AppContext";
 
 const App: React.FC = () => {
-  const scatterData = {
-    x: [10, 20, 30, 40, 50],
-    y: [10, 20, 30, 40, 50],
-    images: [
-      "https://hale-assets-eha4dnapbxakc4db.z01.azurefd.net/assets/logo-no-background-color.svg",
-      "https://hale-assets-eha4dnapbxakc4db.z01.azurefd.net/assets/logo-no-background-color.svg",
-      "https://hale-assets-eha4dnapbxakc4db.z01.azurefd.net/assets/logo-no-background-color.svg",
-      "https://hale-assets-eha4dnapbxakc4db.z01.azurefd.net/assets/logo-no-background-color.svg",
-      "https://hale-assets-eha4dnapbxakc4db.z01.azurefd.net/assets/logo-no-background-color.svg",
-    ],
-  };
-
   return (
-    <div>
-      <h1>Scatter Plot with Images using D3.js</h1>
-      <ScatterPlotD3 data={scatterData} />
-    </div>
+    <GlobalContext>
+      <div className="App">
+        <h1>3D Image Embeddings Visualization</h1>
+        <D3ScatterPlot3D />
+        {/* <ScatterPlotImages /> */}
+        {/* <D3CsvPlot /> */}
+      </div>
+    </GlobalContext>
   );
 };
 
