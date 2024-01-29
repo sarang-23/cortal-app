@@ -57,4 +57,5 @@
 .header {
   padding : 10px 0;
   border-bottom: 4px solid #f79009e5;
+  align-items: start;
 }
